@@ -1,0 +1,30 @@
+{
+  "name": "ai-migration-platform",
+  "version": "1.0.0",
+  "description": "Autonomous AI Migration Platform for Developer Repositories & API Provider Updates",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "setup": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "test": "npm --prefix server test",
+    "docker:up": "docker-compose up --build",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "ai",
+    "migration",
+    "api",
+    "github",
+    "gemini",
+    "code-analysis",
+    "ast",
+    "pull-request"
+  ],
+  "author": "AI Migration Platform Team",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
